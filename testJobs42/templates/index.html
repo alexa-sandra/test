@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+ <div>
+    {% if info %}
+        {{ info.fullname }}
+        <ul>
+            <li>Имя:{{ info.first_name }}</li>
+            <li>Фамилия:{{ info.last_name }}</li>
+            <li>Дата рождения:{{ info.birth_date }}</li>
+            <li>Биография:{{ info.bio }}</li>
+        </ul>
+        <ul>
+            <li>e-mail:{{ info.email }}</li>
+            <li>jabber:{{ info.jabber }}</li>
+            <li>skype:{{ info.skype }}</li>
+            <li>Другое:{{ other_contacts }}</li>
+        </ul>
+
+    {% else %}
+   <p>Данных нет</p>
+{% endif %}
+ </div>
+{% endblock %}
+
+
