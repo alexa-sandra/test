@@ -1,7 +1,7 @@
+# -*- coding: utf-8 -*-
 from django.db import models
 
 
-# Create your models here.
 class Person(models.Model):
     first_name = models.CharField(max_length=60)
     last_name = models.CharField(max_length=60)
@@ -15,3 +15,6 @@ class Person(models.Model):
     def _get_full_name(self):
         return '%s %s' % (self.first_name, self.last_name)
     full_name = property(_get_full_name)
+
+    def __unicode__(self):
+        return u"%s %s" % (self.last_name, self.first_name)
