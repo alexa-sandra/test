@@ -1,0 +1,7 @@
+env/
+.env/
+*.dat
+*.pyc
+*.sqlite3
+*.db
+persondb
