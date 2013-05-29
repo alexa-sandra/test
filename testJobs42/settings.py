@@ -102,6 +102,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+     'testJobs42.personalinfo.middleware.HttpStoredQueryMiddleware',
 )
 
 ROOT_URLCONF = 'testJobs42.urls'
@@ -115,7 +116,7 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     os.path.join(PROJECT_ROOT, 'templates'),
-	os.path.join(PROJECT_ROOT, 'env/lib/python2.7/site-packages/easymode/templates'),
+    os.path.join(PROJECT_ROOT, 'env/lib/python2.7/site-packages/easymode/templates'),
 )
 
 INSTALLED_APPS = (
@@ -125,12 +126,12 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Uncomment the next line to enable the admin:
-    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs'
     #'south',
     'testJobs42.personalinfo',
+    # Uncomment the next line to enable the admin:
+    'django.contrib.admin',
 )
 
 # A sample logging configuration. The only tangible logging

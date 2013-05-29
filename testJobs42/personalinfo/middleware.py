@@ -1,11 +1,11 @@
-from django.db import connection
 from models import HttpStoredQuery
 
-class QueryCountMiddleware(object):
+class HttpStoredQueryMiddleware:
     def process_request(self, request):
+        print 'fghdfdgdgdgdgfdhdf'
 	req = HttpStoredQuery()
         req.path = request.path
-        req.method = request.metod
+        req.method = request.method
         if request.user.is_authenticated():
            req.user = request.user
         req.save()
