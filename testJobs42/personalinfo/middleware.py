@@ -6,7 +6,8 @@ class QueryCountMiddleware(object):
 	req = HttpStoredQuery()
         req.path = request.path
         req.method = request.metod
-	req.user = request.user
+        if request.user.is_authenticated():
+           req.user = request.user
         req.save()
         return None
 

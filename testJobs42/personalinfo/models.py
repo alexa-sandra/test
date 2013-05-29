@@ -23,5 +23,5 @@ class Person(models.Model):
 class HttpStoredQuery(models.Model):
     path = models.CharField(max_length=300)
     method = models.CharField(max_length=20)
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(User, blank=True, null=True)
     date_with_time = models.DateTimeField(auto_now=True)
