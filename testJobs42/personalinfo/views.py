@@ -5,7 +5,8 @@ from models import Person
 
 
 def index(request):
-    info = Person.objects.all()[:1]
+    info = Person.objects.get(pk=1)
+    print info
     template = loader.get_template('index.html')
     context = Context({
         'info': info,

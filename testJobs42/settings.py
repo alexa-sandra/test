@@ -91,7 +91,7 @@ SECRET_KEY = '(1zf^^qg&k6b7i9s5#vug9d8aw4)+ztt#&0adk5)9!vfv@)o^y'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+    #'django.template.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -103,6 +103,12 @@ MIDDLEWARE_CLASSES = (
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
      'testJobs42.personalinfo.middleware.HttpStoredQueryMiddleware',
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    # whatever comes before
+    'testJobs42.personalinfo.context_processors.SettingsToContext',
 )
 
 ROOT_URLCONF = 'testJobs42.urls'

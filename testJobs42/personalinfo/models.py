@@ -9,7 +9,7 @@ class Person(models.Model):
     bio = models.TextField()
     email = models.EmailField(max_length=75)
     skype = models.CharField(max_length=40)
-    jabber = models.CharField(max_length = 75)
+    jabber = models.CharField(max_length=75)
     other_contacts = models.TextField()
 
     def _get_full_name(self):
