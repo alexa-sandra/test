@@ -2,7 +2,6 @@ from models import HttpStoredQuery
 
 class HttpStoredQueryMiddleware:
     def process_request(self, request):
-        print 'fghdfdgdgdgdgfdhdf'
 	req = HttpStoredQuery()
         req.path = request.path
         req.method = request.method
