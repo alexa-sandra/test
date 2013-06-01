@@ -11,13 +11,17 @@ from testJobs42.personalinfo.forms import PersonForm
 def index(request):
     try:
         info = Person.objects.get(pk=1)
-    except:
+    except Person.DoesNotExist:
         info = None
     return render(request, 'index.html', {'info': info})
 
 
 def edit(request):
-    info = Person.objects.get(pk=1)
+    try:
+        info = Person.objects.get(pk=1)
+    except Person.DoesNotExist:
+        return render(request,'index.html',{'info':None})
+    
     if request.method == 'POST':
         form = PersonForm(request.POST)
         if form.is_valid():
