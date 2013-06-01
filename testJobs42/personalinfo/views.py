@@ -9,7 +9,10 @@ from testJobs42.personalinfo.forms import PersonForm
 
 
 def index(request):
-    info = Person.objects.get(pk=1)
+    try:
+        info = Person.objects.get(pk=1)
+    except:
+        info = None
     return render(request, 'index.html', {'info': info})
 
 
