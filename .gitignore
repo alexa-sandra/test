@@ -5,3 +5,8 @@ env/
 *.sqlite3
 *.db
 persondb
+testJobs42/*.pyc
+testJobs42/personalinfo/*.pyc
+cache
+django_cache
+testJobs/.idea

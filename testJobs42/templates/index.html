@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% load thumbnail %}
+
 {% block content %}
  <div style="width:650px">
     {% if info %}
@@ -6,18 +8,28 @@
         <p>Имя:{{ info.first_name }}</p>
         <p>Фамилия:{{ info.last_name }}</p>
         <p>Дата рождения:{{ info.birth_date|date:'d-m-Y' }}</p>
-        <p>Биография:{{ info.bio|escape|linebreaks }}</p>
+        {# % thumbnail info.photo "300x400" crop="center" as im %#}
+            <!--<img src="{{ im.url }}" width="300" height="400" alt="">-->
+        {# % endthumbnail %#}
+       {% if info.photo %}
+            <img src="{{ info.photo.url }}" width="300" height="400" alt="">
+       {% endif %}
+
  </div>
 <div style="float:right; width:300px">
         <p>e-mail:{{ info.email }}</p>
         <p>jabber:{{ info.jabber }}</p>
         <p>skype:{{ info.skype }}</p>
-        <p style = "height:300">Другое:{{ other_contacts|escape|linebreaks }}</p>
+        <p style = "height:300">Другое:{{ info.other_contacts|safe }}</p>
+        <p>Биография:{{ info.bio|safe }}</p>
 
 </div>
     {% else %}
    <p>Данных нет</p>
 {% endif %}
+<div style="float:right;">
+    <a href="{% url 'django.contrib.auth.views.login' %}">Login</a>
+ </div>
  </div>
 {% endblock %}
 

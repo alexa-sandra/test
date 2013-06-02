@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+ <div style="width:650px">
+ {% if user.is_authenticated %}
+ <form method="POST" action="." enctype="multipart/form-data" id="form_id">
+ {% csrf_token %}
+        <div style="float:left; width:300px; height:700px">
+        <p>{{ form.first_name.label_tag }}:{{ form.first_name }}</p>
+        <p>{{ form.last_name.label_tag }}:{{ form.last_name }}</p>
+        <p>{{ form.birth_date.label_tag }}:{{ form.birth_date }}</p>
+        {% if info.photo %}
+            <div><img src="{{ info.photo.url }}" width="300" height="400" alt=""></div>
+        {% endif %}
+        <p>{{ form.photo.label_tag }}:{{ form.photo }}</p>
+      
+ </div>
+<div style="float:right; width:300px; height:700px">
+        <p>{{ form.email.label_tag }}:{{ form.email }}</p>
+        <p>{{ form.jabber.label_tag }}:{{ form.jabber }}</p>
+        <p>{{ form.skype.label_tag }}:{{ form.skype }}</p>
+        <p style = "height:300">{{ form.other_contacts.label_tag }}:{{ form.other_contacts|safe }}</p>
+        <p>{{ form.bio.label_tag }}:{{ form.bio|safe }}</p>
+
+</div>
+ <div style="float:left; width:200px;">
+    <input type="submit" value="submit" />
+    <a href="{% url 'index' %}">cancel</a>
+ </div>
+ </form>
+ {% else %}
+     You have not rights
+     <a href="{% url 'login' %}">Login</a>
+ {% endif %}
+ </div>
+{% endblock %}

@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from django.contrib.auth.models import User
+from sorl.thumbnail.fields import ImageField
+
 
 class Person(models.Model):
     first_name = models.CharField(max_length=60)
@@ -11,6 +13,7 @@ class Person(models.Model):
     skype = models.CharField(max_length=40)
     jabber = models.CharField(max_length=75)
     other_contacts = models.TextField()
+    photo = ImageField(upload_to='images/uploads', null=True, blank=True)
 
     def _get_full_name(self):
         return '%s %s' % (self.first_name, self.last_name)
