@@ -11,7 +11,9 @@
         {# % thumbnail info.photo "300x400" crop="center" as im %#}
             <!--<img src="{{ im.url }}" width="300" height="400" alt="">-->
         {# % endthumbnail %#}
-       <img src="{{ info.photo.url }}" width="300" height="400" alt="">
+       {% if info.photo %}
+            <img src="{{ info.photo.url }}" width="300" height="400" alt="">
+       {% endif %}
 
  </div>
 <div style="float:right; width:300px">
@@ -25,6 +27,9 @@
     {% else %}
    <p>Данных нет</p>
 {% endif %}
+<div style="float:right;">
+    <a href="{% url 'django.contrib.auth.views.login' %}">Login</a>
+ </div>
  </div>
 {% endblock %}
 

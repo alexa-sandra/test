@@ -5,9 +5,9 @@ from django.http import HttpResponse
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import render
 from django.template import loader, Context
+from sorl.thumbnail.fields import ImageField
 from models import Person
 from testJobs42.personalinfo.forms import PersonForm
-
 
 def index(request):
     try:
@@ -24,8 +24,14 @@ def edit(request):
         return render(request,'index.html',{'info':None})
     
     if request.method == 'POST':
-        form = PersonForm(request.POST)
+        form = PersonForm(request.POST, request.FILES)
         if form.is_valid():
+            up_file = request.FILES['photo']
+
+            #img = ImageField(upload_to='images/uploads', null=True, blank=True)
+            #img.value_from_object(up_file)
+            info.photo = up_file
+
             info.first_name = form.cleaned_data['first_name']
             info.last_name = form.cleaned_data['last_name']
             info.birth_date = form.cleaned_data['birth_date']
