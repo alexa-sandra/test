@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse
 from django.http.response import HttpResponseRedirect
@@ -15,7 +16,7 @@ def index(request):
         info = None
     return render(request, 'index.html', {'info': info})
 
-
+@login_required()
 def edit(request):
     try:
         info = Person.objects.get(pk=1)
