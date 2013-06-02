@@ -3,8 +3,8 @@ import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-TEMPLATE_DEBUG = DEBUG
 PROJECT_DIR = os.path.dirname(__file__)
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
@@ -52,18 +52,19 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
 MEDIA_URL = '/media/'
 
+
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
@@ -83,6 +84,8 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
+
+ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '(1zf^^qg&k6b7i9s5#vug9d8aw4)+ztt#&0adk5)9!vfv@)o^y'
@@ -107,7 +110,13 @@ MIDDLEWARE_CLASSES = (
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.request',
+    'django.core.context_processors.media',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.static',
     # whatever comes before
+    'testJobs42.context_processors.media',
     'testJobs42.personalinfo.context_processors.SettingsToContext',
 )
 
@@ -116,7 +125,7 @@ ROOT_URLCONF = 'testJobs42.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'testJobs42.wsgi.application'
 
-PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
@@ -140,7 +149,27 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
 )
+AUTH_PROFILE_MODULE = 'personalinfo.Person'
+#plugins settings
+THUMBNAIL_DEBUG = True
+THUMBNAIL_DUMMY = False
+THUMBNAIL_BACKEND = 'sorl.thumbnail.base.ThumbnailBackend'
+THUMBNAIL_FORMAT = 'JPEG'
+THUMBNAIL_QUALITY = 95
+THUMBNAIL_COLORSPACE = 'RGB'
+THUMBNAIL_UPSCALE = True
+THUMBNAIL_PREFIX = 'cache/'
+THUMBNAIL_KVSTORE = 'sorl.thumbnail.kvstores.cached_db_kvstore.KVStore'
+THUMBNAIL_STORAGE = 'django.core.files.storage.FileSystemStorage'
+THUMBNAIL_KEY_PREFIX = 'sorl-thumbnail'
+THUMBNAIL_ENGINE = 'sorl.thumbnail.engines.pil_engine.Engine'
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': 'django_cache',
+    }
+}
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.
