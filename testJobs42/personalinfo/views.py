@@ -22,12 +22,13 @@ def edit(request):
         info = Person.objects.get(pk=1)
     except Person.DoesNotExist:
         return render(request,'index.html',{'info':None})
-    
+    if request.is_ajax():
+        print 'ajax'
     if request.method == 'POST':
         form = PersonForm(request.POST, request.FILES)
         if form.is_valid():
-            up_file = request.FILES['photo']
-            info.photo = up_file
+            if request.FILES:
+                info.photo = request.FILES['photo']
             info.first_name = form.cleaned_data['first_name']
             info.last_name = form.cleaned_data['last_name']
             info.birth_date = form.cleaned_data['birth_date']

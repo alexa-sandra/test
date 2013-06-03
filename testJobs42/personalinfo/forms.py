@@ -1,18 +1,17 @@
 from django.conf import settings
 from django.forms import ModelForm, Textarea
+from django.utils.safestring import mark_safe
 from testJobs42.personalinfo.models import Person
 from django import forms
 
 class DatePickerWidget(forms.DateInput):
     class Media:
         css = {
-            'all': (settings.STATIC_URL+"css/ui-lightness/jquery-ui-1.10.3.custom.min.css",)
+            'all': ('http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css',)
         }
         js = (
-            settings.STATIC_URL+"js/jquery-ui-1.10.3.custom.min.js",
-            settings.STATIC_URL+"js/jquery.ui.core.js",
-            settings.STATIC_URL+"js/jquery.ui.widget.js",
-            settings.STATIC_URL+"js/jquery.ui.datepicker.js",
+            'http://code.jquery.com/jquery-1.9.1.js',
+            'http://code.jquery.com/ui/1.10.3/jquery-ui.js',
         )
 
     def __init__(self, params='', attrs=None):
