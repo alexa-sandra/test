@@ -62,7 +62,16 @@
       <file leaf-file-name="tests.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/personalinfo/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="52" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.6956522">
+            <state line="82" column="8" selection-start="2436" selection-end="2436" vertical-scroll-proportion="0.7826087">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="middleware.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/personalinfo/middleware.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="26" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -72,15 +81,6 @@
         <entry file="file://$PROJECT_DIR$/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="11" column="92" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="152" column="22" selection-start="5432" selection-end="5432" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -106,6 +106,7 @@
         <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/urls.py" />
         <option value="$PROJECT_DIR$/personalinfo/views.py" />
+        <option value="$PROJECT_DIR$/personalinfo/middleware.py" />
         <option value="$PROJECT_DIR$/personalinfo/tests.py" />
       </list>
     </option>
@@ -377,9 +378,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/personalinfo/middleware.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="26" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/personalinfo/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="52" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.6956522">
+        <state line="82" column="8" selection-start="2436" selection-end="2436" vertical-scroll-proportion="0.7826087">
           <folding />
         </state>
       </provider>

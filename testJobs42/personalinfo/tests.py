@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
+from django.conf import settings
 from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse
 from django.test.client import Client
 
 from django.utils import unittest
-from personalinfo.models import Person
+from personalinfo.middleware import HttpStoredQueryMiddleware
+from personalinfo.models import Person, HttpStoredQuery
 
 
 class PersonTestCase(unittest.TestCase):
@@ -59,4 +62,25 @@ class TestEditForm(unittest.TestCase):
         response = self.client.get('edit')
         self.assertContains(response, '')
 
+
+class ContextProcessorTest(unittest.TestCase):
+    """
+    Test contextProcessor
+    """
+    def test_settings_in_context(self):
+        self.response = Client().get(reverse('/'))
+        self.assertEqual(settings, self.response.context['settings'])
+        self.assertTrue('settings' in self.response.context)
+
+class HttpStoredQueryMiddlewareTest(unittest.TestCase):
+
+    def setUp(self):
+        self.m = HttpStoredQueryMiddleware()
+        self.request = HttpStoredQuery()
+
+    def test_request(self):
+        data = {'path': '/admin', 'method' : 'POST'}
+        self.assertEqual(self.m.process_request(self.request), None)
+        self.assertIsInstance(self.request.path, HttpStoredQuery)
+        self.assertEqual(self.request.path, data['path'])
 
