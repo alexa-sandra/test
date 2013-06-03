@@ -1,0 +1,34 @@
+[
+{
+    "pk": 1,
+    "model": "auth.user",
+    "fields": {
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "is_active": true,
+      "is_superuser": true,
+      "is_staff": true,
+      "last_login": "2013-06-03 21:51:31",
+      "groups": [],
+      "user_permissions": [],
+      "password": "sha1$c2ee8$533fa92410c831c7420cfc0f3c5b14ca2f0a7dc0",
+      "email": "admin@admin.ru",
+      "date_joined": "2013-06-03 21:51:31"
+    }
+  },
+{
+	"pk": 1, 
+	"model": "personalinfo.person",
+	 "fields": {"bio": 
+	"This solution didn't solve the problem in my case. I didn't modify the database and crashed some views because the field ", 
+	"first_name": "Alexa", 
+	"last_name": "Mihailjuk", 
+	"photo": "images/uploads/Dmitrii-Alienichiev-2479-2_1_9.jpg", 
+	"other_contacts": "phone^ 050*****40", 
+	"skype": "alexa_sandra_",
+	 "birth_date": "1987-11-19", 
+	"jabber": "my_jabber@jabber.ru",
+	"email": "my_mail@mail.ru"}
+	},
+]
