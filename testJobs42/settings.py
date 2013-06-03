@@ -168,12 +168,9 @@ THUMBNAIL_STORAGE = 'django.core.files.storage.FileSystemStorage'
 THUMBNAIL_KEY_PREFIX = 'sorl-thumbnail'
 THUMBNAIL_ENGINE = 'sorl.thumbnail.engines.pil_engine.Engine'
 
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-        'LOCATION': 'django_cache',
-    }
-}
+FIXTURE_DIRS = (
+   PROJECT_ROOT,
+)
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.

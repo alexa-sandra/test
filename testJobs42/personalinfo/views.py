@@ -22,8 +22,15 @@ def edit(request):
         info = Person.objects.get(pk=1)
     except Person.DoesNotExist:
         return render(request,'index.html',{'info':None})
-    if request.is_ajax():
-        print 'ajax'
+
+    if request.is_ajax():#submit ajax form
+        form = PersonForm(request.POST, request.FILES, instance=info)
+        if form.is_valid():
+            if request.FILES:
+                form.cleaned_data['photo'] = request.FILES['photo']
+            form.save()
+            return render(request, 'edit.html', locals()) # Redirect after POST
+
     if request.method == 'POST':
         form = PersonForm(request.POST, request.FILES)
         if form.is_valid():
