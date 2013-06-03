@@ -1,13 +1,41 @@
 {% extends "base.html" %}
+{% block header %}
+    {{ form.media }}
+{% endblock %}
+{% block script %}
+    	<script>
+                $(function(){
+                $('#form_id').submit(function(){
+                $(this).ajaxSubmit({
+                beforeSend: function(){
+                $('.progress').show();
+                $('input:submit').attr("disabled","disabled");
+                },
+                success : function() {
+                $('.progress').hide();
+                $('input:submit').removeAttr("disabled");
+                },
+                });
+                return false;
+                });
+                });
+        </script>
+{% endblock %}
 {% block content %}
  <div style="width:650px">
  {% if user.is_authenticated %}
  <form method="POST" action="." enctype="multipart/form-data" id="form_id">
  {% csrf_token %}
+        <!--<script>
+            $(function() {
+                $( "#birth_date" ).datepicker();
+            });
+        </script>-->
+
         <div style="float:left; width:300px; height:700px">
         <p>{{ form.first_name.label_tag }}:{{ form.first_name }}</p>
         <p>{{ form.last_name.label_tag }}:{{ form.last_name }}</p>
-        <p>{{ form.birth_date.label_tag }}:{{ form.birth_date }}</p>
+        <p id="birth_date">{{ form.birth_date.label_tag }}:{{ form.birth_date }}</p>
         {% if info.photo %}
             <div><img src="{{ info.photo.url }}" width="300" height="400" alt=""></div>
         {% endif %}
@@ -27,6 +55,7 @@
     <a href="{% url 'index' %}">cancel</a>
  </div>
  </form>
+ <div id="progress">Progresssssssss</div>
  {% else %}
      You have not rights
      <a href="{% url 'login' %}">Login</a>

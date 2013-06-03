@@ -10,3 +10,4 @@ testJobs42/personalinfo/*.pyc
 cache
 django_cache
 testJobs/.idea
+*.py~
