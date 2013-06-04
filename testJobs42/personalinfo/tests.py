@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
+from StringIO import StringIO
+import sys
 from django.conf import settings
 from django.contrib.auth.models import User
+from django.core.management import call_command
 from django.core.urlresolvers import reverse
 from django.template import Template, Context
 from django.test.client import Client
@@ -99,8 +102,19 @@ class EditLinkTagTest(unittest.TestCase):
     def testEditLinkObject(self):
         t = Template('{% load edit_link %}{% admin_link obj %}')
         self.client.login(username="admin", password="admin")
-        admin_edit_link = edit_link_in_admin(self.obj)
+        admin_edit_link = edit_link_in_admin('',self.obj)
         c = Context({"obj": self.obj})
         result = t.render(c)
         self.assertEqual(admin_edit_link, result.lstrip())
 
+
+class ModelsListCommantTest(unittest.TestCase):
+
+    def test_command(self):
+        from django.db.models import get_models
+
+        output = sys.stdout = StringIO()
+        call_command('appmodelslist personalinfo')
+        sys.stdout = sys.__stdout__
+        for model in get_models():
+            self.assertNotEqual(output.getvalue().find(model._meta.object_name), 0)
