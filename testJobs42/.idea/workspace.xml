@@ -50,19 +50,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signals.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="signals.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/personalinfo/signals.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="2" selection-start="3" selection-end="3" vertical-scroll-proportion="0.0">
+            <state line="29" column="44" selection-start="739" selection-end="739" vertical-scroll-proportion="0.6304348">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="137" column="4" selection-start="4969" selection-end="4969" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/personalinfo/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="53" selection-start="391" selection-end="391" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/personalinfo/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="4" selection-start="1475" selection-end="1475" vertical-scroll-proportion="0.95652175">
+            <state line="32" column="19" selection-start="1052" selection-end="1065" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -81,13 +99,15 @@
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/personalinfo/forms.py" />
         <option value="$PROJECT_DIR$/templates/edit.html" />
-        <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/urls.py" />
         <option value="$PROJECT_DIR$/personalinfo/views.py" />
         <option value="$PROJECT_DIR$/personalinfo/middleware.py" />
         <option value="$PROJECT_DIR$/personalinfo/tests.py" />
-        <option value="$PROJECT_DIR$/personalinfo/signals.py" />
         <option value="$PROJECT_DIR$/personalinfo/models.py" />
+        <option value="$PROJECT_DIR$/personalinfo/admin.py" />
+        <option value="$PROJECT_DIR$/settings.py" />
+        <option value="$PROJECT_DIR$/personalinfo/__init__.py" />
+        <option value="$PROJECT_DIR$/personalinfo/signals.py" />
       </list>
     </option>
   </component>
@@ -367,18 +387,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="22" selection-start="5432" selection-end="5432" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/personalinfo/middleware.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="26" selection-start="167" selection-end="167" vertical-scroll-proportion="0.10869565">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/personalinfo/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="0" selection-start="688" selection-end="688" vertical-scroll-proportion="0.26086956">
@@ -414,13 +422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/personalinfo/management/commands/appmodelslist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/personalinfo/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="100" column="0" selection-start="3035" selection-end="3035" vertical-scroll-proportion="0.0">
@@ -428,16 +429,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/personalinfo/signals.py">
+    <entry file="file://$PROJECT_DIR$/personalinfo/management/commands/appmodelslist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="2" selection-start="3" selection-end="3" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="137" column="4" selection-start="4969" selection-end="4969" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personalinfo/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="14" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/personalinfo/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="4" selection-start="1475" selection-end="1475" vertical-scroll-proportion="0.95652175">
+        <state line="32" column="19" selection-start="1052" selection-end="1065" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personalinfo/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="53" selection-start="391" selection-end="391" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personalinfo/context_processors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personalinfo/middleware.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="26" selection-start="167" selection-end="167" vertical-scroll-proportion="0.10869565">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personalinfo/signals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="44" selection-start="739" selection-end="739" vertical-scroll-proportion="0.6304348">
           <folding />
         </state>
       </provider>
