@@ -108,7 +108,7 @@ class EditLinkTagTest(unittest.TestCase):
         self.assertEqual(admin_edit_link, result.lstrip())
 
 
-class ModelsListCommantTest(unittest.TestCase):
+class ModelsListCommandTest(unittest.TestCase):
 
     def test_command(self):
         from django.db.models import get_models

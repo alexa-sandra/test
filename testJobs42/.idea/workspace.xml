@@ -41,19 +41,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tests.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="tests.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/personalinfo/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="0" selection-start="3035" selection-end="3035" vertical-scroll-proportion="0.0">
+            <state line="117" column="35" selection-start="3637" selection-end="3637" vertical-scroll-proportion="0.82608694">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signals.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="signals.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/personalinfo/signals.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="44" selection-start="739" selection-end="739" vertical-scroll-proportion="0.6304348">
+            <state line="29" column="44" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -102,12 +102,12 @@
         <option value="$PROJECT_DIR$/urls.py" />
         <option value="$PROJECT_DIR$/personalinfo/views.py" />
         <option value="$PROJECT_DIR$/personalinfo/middleware.py" />
-        <option value="$PROJECT_DIR$/personalinfo/tests.py" />
         <option value="$PROJECT_DIR$/personalinfo/models.py" />
         <option value="$PROJECT_DIR$/personalinfo/admin.py" />
         <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/personalinfo/__init__.py" />
         <option value="$PROJECT_DIR$/personalinfo/signals.py" />
+        <option value="$PROJECT_DIR$/personalinfo/tests.py" />
       </list>
     </option>
   </component>
@@ -422,13 +422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/personalinfo/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="0" selection-start="3035" selection-end="3035" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/personalinfo/management/commands/appmodelslist.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -480,7 +473,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/personalinfo/signals.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="44" selection-start="739" selection-end="739" vertical-scroll-proportion="0.6304348">
+        <state line="29" column="44" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personalinfo/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="117" column="35" selection-start="3637" selection-end="3637" vertical-scroll-proportion="0.82608694">
           <folding />
         </state>
       </provider>
