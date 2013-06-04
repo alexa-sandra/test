@@ -2,11 +2,13 @@
 from django.conf import settings
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
+from django.template import Template, Context
 from django.test.client import Client
 
 from django.utils import unittest
-from personalinfo.middleware import HttpStoredQueryMiddleware
-from personalinfo.models import Person, HttpStoredQuery
+from middleware import HttpStoredQueryMiddleware
+from models import Person, HttpStoredQuery
+from testJobs42.personalinfo.templatetags.edit_link import edit_link_in_admin
 
 
 class PersonTestCase(unittest.TestCase):
@@ -72,6 +74,7 @@ class ContextProcessorTest(unittest.TestCase):
         self.assertEqual(settings, self.response.context['settings'])
         self.assertTrue('settings' in self.response.context)
 
+
 class HttpStoredQueryMiddlewareTest(unittest.TestCase):
 
     def setUp(self):
@@ -83,4 +86,21 @@ class HttpStoredQueryMiddlewareTest(unittest.TestCase):
         self.assertEqual(self.m.process_request(self.request), None)
         self.assertIsInstance(self.request.path, HttpStoredQuery)
         self.assertEqual(self.request.path, data['path'])
+
+
+class EditLinkTagTest(unittest.TestCase):
+    """
+    Test for template tag for edit object from template in admin site
+    """
+    def setUp(self):
+        self.obj = Person.objects.get(pk=1)
+        self.client = Client()
+
+    def testEditLinkObject(self):
+        t = Template('{% load edit_link %}{% admin_link obj %}')
+        self.client.login(username="admin", password="admin")
+        admin_edit_link = edit_link_in_admin(self.obj)
+        c = Context({"obj": self.obj})
+        result = t.render(c)
+        self.assertEqual(admin_edit_link, result.lstrip())
 
