@@ -3,7 +3,7 @@
 {% load edit_link %}
 
 {% block content %}
- <div style="width:650px">
+ <div style="width:750px">
     {% if user.is_authenticated %}
         <a href="{% url 'edit' %}">Edit</a>&nbsp;
         <a href="{% admin_link info %}">Admin</a>
