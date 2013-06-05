@@ -19,6 +19,7 @@ class Migration(SchemaMigration):
             ('skype', self.gf('django.db.models.fields.CharField')(max_length=40)),
             ('jabber', self.gf('django.db.models.fields.CharField')(max_length=75)),
             ('other_contacts', self.gf('django.db.models.fields.TextField')()),
+            ('photo', self.gf('sorl.thumbnail.fields.ImageField')(max_length=100, null=True, blank=True)),
         ))
         db.send_create_signal(u'personalinfo', ['Person'])
 
@@ -29,8 +30,18 @@ class Migration(SchemaMigration):
             ('method', self.gf('django.db.models.fields.CharField')(max_length=20)),
             ('user', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['auth.User'], null=True, blank=True)),
             ('date_with_time', self.gf('django.db.models.fields.DateTimeField')(auto_now=True, blank=True)),
+            ('priority', self.gf('django.db.models.fields.IntegerField')(default=1)),
         ))
         db.send_create_signal(u'personalinfo', ['HttpStoredQuery'])
+
+        # Adding model 'ModelsActions'
+        db.create_table(u'personalinfo_modelsactions', (
+            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+            ('action', self.gf('django.db.models.fields.IntegerField')(default=0)),
+            ('model_name', self.gf('django.db.models.fields.CharField')(max_length=75)),
+            ('date_with_time', self.gf('django.db.models.fields.DateTimeField')(auto_now=True, blank=True)),
+        ))
+        db.send_create_signal(u'personalinfo', ['ModelsActions'])
 
 
     def backwards(self, orm):
@@ -39,6 +50,9 @@ class Migration(SchemaMigration):
 
         # Deleting model 'HttpStoredQuery'
         db.delete_table(u'personalinfo_httpstoredquery')
+
+        # Deleting model 'ModelsActions'
+        db.delete_table(u'personalinfo_modelsactions')
 
 
     models = {
@@ -84,7 +98,15 @@ class Migration(SchemaMigration):
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'method': ('django.db.models.fields.CharField', [], {'max_length': '20'}),
             'path': ('django.db.models.fields.CharField', [], {'max_length': '300'}),
+            'priority': ('django.db.models.fields.IntegerField', [], {'default': '1'}),
             'user': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['auth.User']", 'null': 'True', 'blank': 'True'})
+        },
+        u'personalinfo.modelsactions': {
+            'Meta': {'object_name': 'ModelsActions'},
+            'action': ('django.db.models.fields.IntegerField', [], {'default': '0'}),
+            'date_with_time': ('django.db.models.fields.DateTimeField', [], {'auto_now': 'True', 'blank': 'True'}),
+            u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'model_name': ('django.db.models.fields.CharField', [], {'max_length': '75'})
         },
         u'personalinfo.person': {
             'Meta': {'object_name': 'Person'},
@@ -96,6 +118,7 @@ class Migration(SchemaMigration):
             'jabber': ('django.db.models.fields.CharField', [], {'max_length': '75'}),
             'last_name': ('django.db.models.fields.CharField', [], {'max_length': '60'}),
             'other_contacts': ('django.db.models.fields.TextField', [], {}),
+            'photo': ('sorl.thumbnail.fields.ImageField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
             'skype': ('django.db.models.fields.CharField', [], {'max_length': '40'})
         }
     }

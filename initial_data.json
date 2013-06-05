@@ -1,34 +1,1203 @@
 [
 {
-    "pk": 1,
-    "model": "auth.user",
+    "pk": 1, 
+    "model": "contenttypes.contenttype", 
     "fields": {
-      "username": "admin",
-      "first_name": "",
-      "last_name": "",
-      "is_active": true,
-      "is_superuser": true,
-      "is_staff": true,
-      "last_login": "2013-06-03 21:51:31",
-      "groups": [],
-      "user_permissions": [],
-      "password": "sha1$c2ee8$533fa92410c831c7420cfc0f3c5b14ca2f0a7dc0",
-      "email": "admin@admin.ru",
-      "date_joined": "2013-06-03 21:51:31"
+        "model": "permission", 
+        "name": "permission", 
+        "app_label": "auth"
     }
-  },
+},
 {
-	"pk": 1, 
-	"model": "personalinfo.person",
-	 "fields": {"bio": 
-	"This solution didn't solve the problem in my case. I didn't modify the database and crashed some views because the field ", 
-	"first_name": "Alexa", 
-	"last_name": "Mihailjuk", 
-	"photo": "images/uploads/Dmitrii-Alienichiev-2479-2_1_9.jpg", 
-	"other_contacts": "phone^ 050*****40", 
-	"skype": "alexa_sandra_",
-	 "birth_date": "1987-11-19", 
-	"jabber": "my_jabber@jabber.ru",
-	"email": "my_mail@mail.ru"}
-	},
+    "pk": 2, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "group", 
+        "name": "group", 
+        "app_label": "auth"
+    }
+},
+{
+    "pk": 3, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "user", 
+        "name": "user", 
+        "app_label": "auth"
+    }
+},
+{
+    "pk": 4, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "contenttype", 
+        "name": "content type", 
+        "app_label": "contenttypes"
+    }
+},
+{
+    "pk": 5, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "session", 
+        "name": "session", 
+        "app_label": "sessions"
+    }
+},
+{
+    "pk": 6, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "site", 
+        "name": "site", 
+        "app_label": "sites"
+    }
+},
+{
+    "pk": 7, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "kvstore", 
+        "name": "kv store", 
+        "app_label": "thumbnail"
+    }
+},
+{
+    "pk": 8, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "migrationhistory", 
+        "name": "migration history", 
+        "app_label": "south"
+    }
+},
+{
+    "pk": 9, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "person", 
+        "name": "person", 
+        "app_label": "personalinfo"
+    }
+},
+{
+    "pk": 10, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "httpstoredquery", 
+        "name": "http stored query", 
+        "app_label": "personalinfo"
+    }
+},
+{
+    "pk": 11, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "modelsactions", 
+        "name": "models actions", 
+        "app_label": "personalinfo"
+    }
+},
+{
+    "pk": 12, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "logentry", 
+        "name": "log entry", 
+        "app_label": "admin"
+    }
+},
+{
+    "pk": 13, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "bookmark", 
+        "name": "bookmark", 
+        "app_label": "menu"
+    }
+},
+{
+    "pk": 14, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "dashboardpreferences", 
+        "name": "dashboard preferences", 
+        "app_label": "dashboard"
+    }
+},
+{
+    "pk": "jdkgpmtyy7llb6pxdyipb7143yjg7ma0", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2013-06-19T07:55:21.742Z", 
+        "session_data": "NGZjNjI2NjM1YTBkZGQxOWE3YWUzZjc3YjM4MjE2YTE0M2Q2YjZhMzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu"
+    }
+},
+{
+    "pk": 1, 
+    "model": "sites.site", 
+    "fields": {
+        "domain": "example.com", 
+        "name": "example.com"
+    }
+},
+{
+    "pk": 1, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2013-06-05T07:54:05.974Z", 
+        "app_name": "menu", 
+        "migration": "0001_initial"
+    }
+},
+{
+    "pk": 2, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2013-06-05T07:54:06.167Z", 
+        "app_name": "dashboard", 
+        "migration": "0001_initial"
+    }
+},
+{
+    "pk": 3, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2013-06-05T07:54:06.310Z", 
+        "app_name": "dashboard", 
+        "migration": "0002_auto__add_field_dashboardpreferences_dashboard_id"
+    }
+},
+{
+    "pk": 4, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2013-06-05T07:54:06.429Z", 
+        "app_name": "dashboard", 
+        "migration": "0003_auto__add_unique_dashboardpreferences_dashboard_id_user"
+    }
+},
+{
+    "pk": 1, 
+    "model": "personalinfo.person", 
+    "fields": {
+        "bio": "bio", 
+        "first_name": "Alexandra", 
+        "last_name": "Mikhailjuk", 
+        "photo": "images/uploads/pycharm_1.png", 
+        "other_contacts": "fff", 
+        "skype": "alexa_sandra_", 
+        "birth_date": "1987-11-19", 
+        "jabber": "a@mail.ru", 
+        "email": "a@Qmail.ru"
+    }
+},
+{
+    "pk": 1, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:53:34.272Z", 
+        "model_name": "ContentType"
+    }
+},
+{
+    "pk": 2, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:53:34.299Z", 
+        "model_name": "ContentType"
+    }
+},
+{
+    "pk": 3, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:53:34.376Z", 
+        "model_name": "ContentType"
+    }
+},
+{
+    "pk": 4, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:53:56.220Z", 
+        "model_name": "User"
+    }
+},
+{
+    "pk": 5, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 1, 
+        "date_with_time": "2013-06-05T07:53:56.242Z", 
+        "model_name": "User"
+    }
+},
+{
+    "pk": 6, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:53:56.272Z", 
+        "model_name": "ContentType"
+    }
+},
+{
+    "pk": 7, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:53:56.323Z", 
+        "model_name": "ContentType"
+    }
+},
+{
+    "pk": 8, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:53:56.386Z", 
+        "model_name": "ContentType"
+    }
+},
+{
+    "pk": 9, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:53:56.422Z", 
+        "model_name": "Site"
+    }
+},
+{
+    "pk": 10, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:53:56.450Z", 
+        "model_name": "ContentType"
+    }
+},
+{
+    "pk": 11, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:53:56.488Z", 
+        "model_name": "ContentType"
+    }
+},
+{
+    "pk": 12, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:53:56.548Z", 
+        "model_name": "ContentType"
+    }
+},
+{
+    "pk": 13, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:53:56.570Z", 
+        "model_name": "ContentType"
+    }
+},
+{
+    "pk": 14, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:53:56.593Z", 
+        "model_name": "ContentType"
+    }
+},
+{
+    "pk": 15, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:53:56.632Z", 
+        "model_name": "ContentType"
+    }
+},
+{
+    "pk": 16, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:54:05.975Z", 
+        "model_name": "MigrationHistory"
+    }
+},
+{
+    "pk": 17, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:54:06.009Z", 
+        "model_name": "ContentType"
+    }
+},
+{
+    "pk": 18, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:54:06.170Z", 
+        "model_name": "MigrationHistory"
+    }
+},
+{
+    "pk": 19, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:54:06.311Z", 
+        "model_name": "MigrationHistory"
+    }
+},
+{
+    "pk": 20, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:54:06.431Z", 
+        "model_name": "MigrationHistory"
+    }
+},
+{
+    "pk": 21, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:54:06.457Z", 
+        "model_name": "ContentType"
+    }
+},
+{
+    "pk": 22, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:55:15.409Z", 
+        "model_name": "Session"
+    }
+},
+{
+    "pk": 23, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:55:15.441Z", 
+        "model_name": "HttpStoredQuery"
+    }
+},
+{
+    "pk": 24, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 1, 
+        "date_with_time": "2013-06-05T07:55:15.757Z", 
+        "model_name": "Session"
+    }
+},
+{
+    "pk": 25, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:55:15.954Z", 
+        "model_name": "HttpStoredQuery"
+    }
+},
+{
+    "pk": 26, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:55:21.516Z", 
+        "model_name": "HttpStoredQuery"
+    }
+},
+{
+    "pk": 27, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:55:21.693Z", 
+        "model_name": "Session"
+    }
+},
+{
+    "pk": 28, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 2, 
+        "date_with_time": "2013-06-05T07:55:21.706Z", 
+        "model_name": "Session"
+    }
+},
+{
+    "pk": 29, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 1, 
+        "date_with_time": "2013-06-05T07:55:21.726Z", 
+        "model_name": "User"
+    }
+},
+{
+    "pk": 30, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 1, 
+        "date_with_time": "2013-06-05T07:55:21.755Z", 
+        "model_name": "Session"
+    }
+},
+{
+    "pk": 31, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:55:21.825Z", 
+        "model_name": "HttpStoredQuery"
+    }
+},
+{
+    "pk": 32, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:55:22.082Z", 
+        "model_name": "DashboardPreferences"
+    }
+},
+{
+    "pk": 33, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:55:22.354Z", 
+        "model_name": "HttpStoredQuery"
+    }
+},
+{
+    "pk": 34, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:55:33.784Z", 
+        "model_name": "HttpStoredQuery"
+    }
+},
+{
+    "pk": 35, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:55:34.292Z", 
+        "model_name": "HttpStoredQuery"
+    }
+},
+{
+    "pk": 36, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:55:34.399Z", 
+        "model_name": "HttpStoredQuery"
+    }
+},
+{
+    "pk": 37, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:56:11.399Z", 
+        "model_name": "HttpStoredQuery"
+    }
+},
+{
+    "pk": 38, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:56:11.921Z", 
+        "model_name": "HttpStoredQuery"
+    }
+},
+{
+    "pk": 39, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:56:11.998Z", 
+        "model_name": "HttpStoredQuery"
+    }
+},
+{
+    "pk": 40, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:56:12.726Z", 
+        "model_name": "HttpStoredQuery"
+    }
+},
+{
+    "pk": 41, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:57:20.942Z", 
+        "model_name": "HttpStoredQuery"
+    }
+},
+{
+    "pk": 42, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:57:21.186Z", 
+        "model_name": "Person"
+    }
+},
+{
+    "pk": 43, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:57:21.189Z", 
+        "model_name": "LogEntry"
+    }
+},
+{
+    "pk": 44, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:57:21.265Z", 
+        "model_name": "HttpStoredQuery"
+    }
+},
+{
+    "pk": 45, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:57:21.782Z", 
+        "model_name": "HttpStoredQuery"
+    }
+},
+{
+    "pk": 46, 
+    "model": "personalinfo.modelsactions", 
+    "fields": {
+        "action": 0, 
+        "date_with_time": "2013-06-05T07:57:21.826Z", 
+        "model_name": "HttpStoredQuery"
+    }
+},
+{
+    "pk": 1, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_permission", 
+        "name": "Can add permission", 
+        "content_type": 1
+    }
+},
+{
+    "pk": 2, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_permission", 
+        "name": "Can change permission", 
+        "content_type": 1
+    }
+},
+{
+    "pk": 3, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_permission", 
+        "name": "Can delete permission", 
+        "content_type": 1
+    }
+},
+{
+    "pk": 4, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_group", 
+        "name": "Can add group", 
+        "content_type": 2
+    }
+},
+{
+    "pk": 5, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_group", 
+        "name": "Can change group", 
+        "content_type": 2
+    }
+},
+{
+    "pk": 6, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_group", 
+        "name": "Can delete group", 
+        "content_type": 2
+    }
+},
+{
+    "pk": 7, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_user", 
+        "name": "Can add user", 
+        "content_type": 3
+    }
+},
+{
+    "pk": 8, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_user", 
+        "name": "Can change user", 
+        "content_type": 3
+    }
+},
+{
+    "pk": 9, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_user", 
+        "name": "Can delete user", 
+        "content_type": 3
+    }
+},
+{
+    "pk": 10, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_contenttype", 
+        "name": "Can add content type", 
+        "content_type": 4
+    }
+},
+{
+    "pk": 11, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_contenttype", 
+        "name": "Can change content type", 
+        "content_type": 4
+    }
+},
+{
+    "pk": 12, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_contenttype", 
+        "name": "Can delete content type", 
+        "content_type": 4
+    }
+},
+{
+    "pk": 13, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_session", 
+        "name": "Can add session", 
+        "content_type": 5
+    }
+},
+{
+    "pk": 14, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_session", 
+        "name": "Can change session", 
+        "content_type": 5
+    }
+},
+{
+    "pk": 15, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_session", 
+        "name": "Can delete session", 
+        "content_type": 5
+    }
+},
+{
+    "pk": 16, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_site", 
+        "name": "Can add site", 
+        "content_type": 6
+    }
+},
+{
+    "pk": 17, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_site", 
+        "name": "Can change site", 
+        "content_type": 6
+    }
+},
+{
+    "pk": 18, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_site", 
+        "name": "Can delete site", 
+        "content_type": 6
+    }
+},
+{
+    "pk": 19, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_kvstore", 
+        "name": "Can add kv store", 
+        "content_type": 7
+    }
+},
+{
+    "pk": 20, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_kvstore", 
+        "name": "Can change kv store", 
+        "content_type": 7
+    }
+},
+{
+    "pk": 21, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_kvstore", 
+        "name": "Can delete kv store", 
+        "content_type": 7
+    }
+},
+{
+    "pk": 22, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_migrationhistory", 
+        "name": "Can add migration history", 
+        "content_type": 8
+    }
+},
+{
+    "pk": 23, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_migrationhistory", 
+        "name": "Can change migration history", 
+        "content_type": 8
+    }
+},
+{
+    "pk": 24, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_migrationhistory", 
+        "name": "Can delete migration history", 
+        "content_type": 8
+    }
+},
+{
+    "pk": 25, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_person", 
+        "name": "Can add person", 
+        "content_type": 9
+    }
+},
+{
+    "pk": 26, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_person", 
+        "name": "Can change person", 
+        "content_type": 9
+    }
+},
+{
+    "pk": 27, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_person", 
+        "name": "Can delete person", 
+        "content_type": 9
+    }
+},
+{
+    "pk": 28, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_httpstoredquery", 
+        "name": "Can add http stored query", 
+        "content_type": 10
+    }
+},
+{
+    "pk": 29, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_httpstoredquery", 
+        "name": "Can change http stored query", 
+        "content_type": 10
+    }
+},
+{
+    "pk": 30, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_httpstoredquery", 
+        "name": "Can delete http stored query", 
+        "content_type": 10
+    }
+},
+{
+    "pk": 31, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_modelsactions", 
+        "name": "Can add models actions", 
+        "content_type": 11
+    }
+},
+{
+    "pk": 32, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_modelsactions", 
+        "name": "Can change models actions", 
+        "content_type": 11
+    }
+},
+{
+    "pk": 33, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_modelsactions", 
+        "name": "Can delete models actions", 
+        "content_type": 11
+    }
+},
+{
+    "pk": 34, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_logentry", 
+        "name": "Can add log entry", 
+        "content_type": 12
+    }
+},
+{
+    "pk": 35, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_logentry", 
+        "name": "Can change log entry", 
+        "content_type": 12
+    }
+},
+{
+    "pk": 36, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_logentry", 
+        "name": "Can delete log entry", 
+        "content_type": 12
+    }
+},
+{
+    "pk": 37, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_bookmark", 
+        "name": "Can add bookmark", 
+        "content_type": 13
+    }
+},
+{
+    "pk": 38, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_bookmark", 
+        "name": "Can change bookmark", 
+        "content_type": 13
+    }
+},
+{
+    "pk": 39, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_bookmark", 
+        "name": "Can delete bookmark", 
+        "content_type": 13
+    }
+},
+{
+    "pk": 40, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_dashboardpreferences", 
+        "name": "Can add dashboard preferences", 
+        "content_type": 14
+    }
+},
+{
+    "pk": 41, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_dashboardpreferences", 
+        "name": "Can change dashboard preferences", 
+        "content_type": 14
+    }
+},
+{
+    "pk": 42, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_dashboardpreferences", 
+        "name": "Can delete dashboard preferences", 
+        "content_type": 14
+    }
+},
+{
+    "pk": 1, 
+    "model": "auth.user", 
+    "fields": {
+        "username": "admin", 
+        "first_name": "", 
+        "last_name": "", 
+        "is_active": true, 
+        "is_superuser": true, 
+        "is_staff": true, 
+        "last_login": "2013-06-05T07:55:21.716Z", 
+        "groups": [], 
+        "user_permissions": [], 
+        "password": "pbkdf2_sha256$10000$UhlusYJANiVy$qYmRPEEQ190+symnsPzHWpCc0z3ScsyKLoE9j2GV2VA=", 
+        "email": "s@hghg.tu", 
+        "date_joined": "2013-06-05T07:53:56.069Z"
+    }
+},
+{
+    "pk": 1, 
+    "model": "personalinfo.httpstoredquery", 
+    "fields": {
+        "priority": 1, 
+        "path": "/admin/", 
+        "date_with_time": "2013-06-05T07:55:15.423Z", 
+        "method": "GET", 
+        "user": null
+    }
+},
+{
+    "pk": 2, 
+    "model": "personalinfo.httpstoredquery", 
+    "fields": {
+        "priority": 1, 
+        "path": "/media/css/base.css", 
+        "date_with_time": "2013-06-05T07:55:15.906Z", 
+        "method": "GET", 
+        "user": null
+    }
+},
+{
+    "pk": 3, 
+    "model": "personalinfo.httpstoredquery", 
+    "fields": {
+        "priority": 1, 
+        "path": "/admin/", 
+        "date_with_time": "2013-06-05T07:55:21.490Z", 
+        "method": "POST", 
+        "user": null
+    }
+},
+{
+    "pk": 4, 
+    "model": "personalinfo.httpstoredquery", 
+    "fields": {
+        "priority": 1, 
+        "path": "/admin/", 
+        "date_with_time": "2013-06-05T07:55:21.800Z", 
+        "method": "GET", 
+        "user": 1
+    }
+},
+{
+    "pk": 5, 
+    "model": "personalinfo.httpstoredquery", 
+    "fields": {
+        "priority": 1, 
+        "path": "/media/css/base.css", 
+        "date_with_time": "2013-06-05T07:55:22.233Z", 
+        "method": "GET", 
+        "user": 1
+    }
+},
+{
+    "pk": 6, 
+    "model": "personalinfo.httpstoredquery", 
+    "fields": {
+        "priority": 1, 
+        "path": "/admin/personalinfo/httpstoredquery/", 
+        "date_with_time": "2013-06-05T07:55:33.764Z", 
+        "method": "GET", 
+        "user": 1
+    }
+},
+{
+    "pk": 7, 
+    "model": "personalinfo.httpstoredquery", 
+    "fields": {
+        "priority": 1, 
+        "path": "/media/css/base.css", 
+        "date_with_time": "2013-06-05T07:55:34.270Z", 
+        "method": "GET", 
+        "user": 1
+    }
+},
+{
+    "pk": 8, 
+    "model": "personalinfo.httpstoredquery", 
+    "fields": {
+        "priority": 1, 
+        "path": "/admin/jsi18n/", 
+        "date_with_time": "2013-06-05T07:55:34.355Z", 
+        "method": "GET", 
+        "user": 1
+    }
+},
+{
+    "pk": 9, 
+    "model": "personalinfo.httpstoredquery", 
+    "fields": {
+        "priority": 1, 
+        "path": "/admin/personalinfo/person/add/", 
+        "date_with_time": "2013-06-05T07:56:11.379Z", 
+        "method": "GET", 
+        "user": 1
+    }
+},
+{
+    "pk": 10, 
+    "model": "personalinfo.httpstoredquery", 
+    "fields": {
+        "priority": 1, 
+        "path": "/media/css/base.css", 
+        "date_with_time": "2013-06-05T07:56:11.866Z", 
+        "method": "GET", 
+        "user": 1
+    }
+},
+{
+    "pk": 11, 
+    "model": "personalinfo.httpstoredquery", 
+    "fields": {
+        "priority": 1, 
+        "path": "/admin/jsi18n/", 
+        "date_with_time": "2013-06-05T07:56:11.954Z", 
+        "method": "GET", 
+        "user": 1
+    }
+},
+{
+    "pk": 12, 
+    "model": "personalinfo.httpstoredquery", 
+    "fields": {
+        "priority": 1, 
+        "path": "/media/img/icon_calendar.gif", 
+        "date_with_time": "2013-06-05T07:56:12.699Z", 
+        "method": "GET", 
+        "user": 1
+    }
+},
+{
+    "pk": 13, 
+    "model": "personalinfo.httpstoredquery", 
+    "fields": {
+        "priority": 1, 
+        "path": "/admin/personalinfo/person/add/", 
+        "date_with_time": "2013-06-05T07:57:20.917Z", 
+        "method": "POST", 
+        "user": 1
+    }
+},
+{
+    "pk": 14, 
+    "model": "personalinfo.httpstoredquery", 
+    "fields": {
+        "priority": 1, 
+        "path": "/admin/personalinfo/person/", 
+        "date_with_time": "2013-06-05T07:57:21.249Z", 
+        "method": "GET", 
+        "user": 1
+    }
+},
+{
+    "pk": 15, 
+    "model": "personalinfo.httpstoredquery", 
+    "fields": {
+        "priority": 1, 
+        "path": "/admin/jsi18n/", 
+        "date_with_time": "2013-06-05T07:57:21.759Z", 
+        "method": "GET", 
+        "user": 1
+    }
+},
+{
+    "pk": 16, 
+    "model": "personalinfo.httpstoredquery", 
+    "fields": {
+        "priority": 1, 
+        "path": "/media/css/base.css", 
+        "date_with_time": "2013-06-05T07:57:21.763Z", 
+        "method": "GET", 
+        "user": 1
+    }
+},
+{
+    "pk": 1, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2013-06-05T07:57:21.188Z", 
+        "object_repr": "Mikhailjuk Alexandra", 
+        "object_id": "1", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 9
+    }
+},
+{
+    "pk": 1, 
+    "model": "dashboard.dashboardpreferences", 
+    "fields": {
+        "dashboard_id": "dashboard", 
+        "data": "{}", 
+        "user": 1
+    }
+}
 ]
